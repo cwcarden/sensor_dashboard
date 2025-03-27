@@ -43,8 +43,8 @@ defmodule SensorDashboardWeb.DashboardLive.Index do
         <p class="text-3xl font-bold text-green-600 mt-2"><%= @co2 %> ppm</p>
       </div>
       <div class="bg-white shadow rounded-2xl p-6 text-center">
-        <h2 class="text-lg font-semibold text-gray-700">Light Intensity</h2>
-        <p class="text-3xl font-bold text-yellow-500 mt-2"><%= @light %> lux</p>
+        <h2 class="text-lg font-semibold text-gray-700">PPFD</h2>
+        <p class="text-3xl font-bold text-yellow-500 mt-2"><%= @light %> µmol/m²/s</p>
       </div>
     </div>
     """
