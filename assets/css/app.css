@@ -1,0 +1,17 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* This file is for your main application CSS */
+body {
+    @apply bg-gray-100 text-gray-900;
+  }
+  
+  header {
+    @apply bg-white shadow-md py-4 px-6 flex justify-between items-center;
+  }
+  
+  nav a {
+    @apply text-blue-600 hover:underline;
+  }
+  
