@@ -12,6 +12,7 @@ defmodule SensorDashboardWeb.Router do
 
   pipeline :api do
     plug :accepts, ["json"]
+    plug SensorDashboardWeb.Plugs.Auth
   end
 
   scope "/", SensorDashboardWeb do
@@ -20,7 +21,9 @@ defmodule SensorDashboardWeb.Router do
     live "/", DashboardLive.Index, :index
     live "/settings", SettingsLive, :index
     live "/history", HistoryLive, :index
-    live "/login", LoginLive, :index
+    live "/login", LoginLive.Index, :index
+    get "/auth/login/success", AuthController, :login_success
+    live "/logout", LogoutLive.Index, :index
     live "/auth", AuthLive.Index, :index
 
   end

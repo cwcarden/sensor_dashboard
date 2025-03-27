@@ -12,21 +12,23 @@
     </script>
   </head>
   <body class="bg-gray-100 min-h-screen text-gray-900">
-  <header class="bg-white shadow-md py-4 px-6 flex justify-between items-center">
-    <h1 class="text-xl font-bold">Sensor Dashboard</h1>
-    <nav class="space-x-4">
-      <.link navigate={~p"/"} class="text-blue-600 hover:underline">Dashboard</.link>
-      <.link navigate={~p"/history"} class="text-blue-600 hover:underline">History</.link>
-      <.link navigate={~p"/settings"} class="text-blue-600 hover:underline">Settings</.link>
-      <.link navigate={~p"/login"} class="text-blue-600 hover:underline">Login</.link>
-    </nav>
-  </header>
+    <header class="bg-white shadow-md py-4 px-6 flex justify-between items-center">
+      <h1 class="text-xl font-bold">Sensor Dashboard</h1>
+      <nav class="space-x-4">
+        <.link navigate={~p"/"} class="text-blue-600 hover:underline">Dashboard</.link>
+        <.link navigate={~p"/history"} class="text-blue-600 hover:underline">History</.link>
+        <.link navigate={~p"/settings"} class="text-blue-600 hover:underline">Settings</.link>
+        <.link navigate={~p"/login"} class="text-blue-600 hover:underline">Login</.link>
+        <.link navigate={~p"/logout"} class="text-red-600 hover:underline">Logout</.link>
+      </nav>
+    </header>
 
-  <main class="p-6">
-    <%= @inner_content %>
-  </main>
-</body>
+    <div class="px-6 pt-4">
+      <.flash_group flash={@flash} />
+    </div>
 
+    <main class="p-6">
+      <%= @inner_content %>
+    </main>
+  </body>
 </html>
-
-

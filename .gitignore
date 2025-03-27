@@ -37,3 +37,6 @@ npm-debug.log
 
 # Apple droppings
 .DS_Store
+
+#Secrets
+.env
